@@ -1,0 +1,32 @@
+###
+GET http://localhost:3000/post HTTP/1.1
+
+###
+GET http://localhost:3000/post/1 HTTP/1.1
+
+###
+POST http://localhost:3000/post HTTP/1.1
+content-type: application/json
+
+{
+  "slug": "slug-2",
+  "title": "title",
+  "excerpt": "excerpt",
+  "content": "content",
+  "category": "category",
+  "tags": ["tags", "123"],
+  "status": true
+}
+
+###
+PUT http://localhost:3000/post/2 HTTP/1.1
+content-type: application/json
+
+{
+  "slug": "Titulo",
+  "title": "Descripcion",
+  "category": "Categoria-12"
+}
+
+###
+DELETE http://localhost:3000/post/2 HTTP/1.1
